@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* Ink & Brass — tokens from DESIGN.md. Dark only, no light scheme. */
+:root {
+  /* shadcn semantic vars, mapped onto the brand palette */
+  --background: #14161c;
+  --foreground: #edeae3;
+  --card: #1a1d25;
+  --card-foreground: #edeae3;
+  --popover: #1a1d25;
+  --popover-foreground: #edeae3;
+  --primary: #c9974d;
+  --primary-foreground: #14161c;
+  --secondary: #1a1d25;
+  --secondary-foreground: #edeae3;
+  --muted: #1a1d25;
+  --muted-foreground: #a7a49b;
+  --accent: #1a1d25;
+  --accent-foreground: #edeae3;
+  --destructive: #a7a49b;
+  --destructive-foreground: #14161c;
+  --border: #33363f;
+  --input: #33363f;
+  --ring: #c9974d;
+}
+
+@theme inline {
+  /* semantic (shadcn) */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* brand (DESIGN.md §1) */
+  --color-tinte: #14161c;
+  --color-tinte-tief: #0f1116;
+  --color-tinte-hoch: #1a1d25;
+  --color-messing: #c9974d;
+  --color-papier: #edeae3;
+  --color-papier-gedaempft: #a7a49b;
+  --color-haarlinie: #33363f;
+
+  /* fonts (DESIGN.md §2) */
+  --font-display: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-text: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-utility: var(--font-plex-mono), ui-monospace, Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: #c9974d;
+  color: #14161c;
+}
+
+/* Scroll-entry reveals (D-17). Hidden state only applies once JS confirms
+   itself via html.js, so content stays visible without JavaScript.
+   transform/opacity only — GPU-safe. */
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.js [data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Ultra-subtle dot grid for Tinte Tief panes (DESIGN.md §5) */
+.dot-grid {
+  background-image: radial-gradient(
+    rgba(237, 234, 227, 0.035) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
