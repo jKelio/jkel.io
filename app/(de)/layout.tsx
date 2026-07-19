@@ -15,6 +15,15 @@ export const metadata: Metadata = {
     canonical: "/de",
     languages: { en: "/" },
   },
+  openGraph: {
+    type: "website",
+    siteName: "Leon Jäkel",
+    locale: "de_DE",
+    url: "/de",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function DeLayout({
