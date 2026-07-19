@@ -1,20 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 /*
  * Email is assembled client-side (COPY.md site-wide note) so the address
  * never appears in the server-rendered HTML that scrapers read.
+ * useSyncExternalStore returns the server snapshot (null) during SSR and
+ * hydration, then the real address — no effect, no hydration mismatch.
  */
 const USER = "leon.jaekel";
 const DOMAIN = "outlook.de";
 
-const ObfuscatedEmail = () => {
-  const [email, setEmail] = useState<string | null>(null);
+const subscribe = () => () => {};
 
-  useEffect(() => {
-    setEmail(`${USER}@${DOMAIN}`);
-  }, []);
+const ObfuscatedEmail = () => {
+  const email = useSyncExternalStore(
+    subscribe,
+    () => `${USER}@${DOMAIN}`,
+    () => null,
+  );
 
   if (!email) {
     return (
