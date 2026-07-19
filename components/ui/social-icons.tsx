@@ -21,19 +21,23 @@ const GitHubIcon = () => (
   </svg>
 );
 
-const SocialIcons = () => {
+// `linkedin={false}` drops the LinkedIn icon where the row sits next to the
+// primary LinkedIn button — same intent twice in one row reads as clutter.
+const SocialIcons = ({ linkedin = true }: { linkedin?: boolean }) => {
   return (
     <div className="flex items-center gap-4">
-      <Button variant="outline" size="icon" asChild>
-        <a
-          href={SITE.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Connect with Leon Jäkel on LinkedIn"
-        >
-          <LinkedInIcon />
-        </a>
-      </Button>
+      {linkedin && (
+        <Button variant="outline" size="icon" asChild>
+          <a
+            href={SITE.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Connect with Leon Jäkel on LinkedIn"
+          >
+            <LinkedInIcon />
+          </a>
+        </Button>
+      )}
       <Button variant="outline" size="icon" asChild>
         <a
           href={SITE.github}

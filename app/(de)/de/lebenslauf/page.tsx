@@ -35,7 +35,7 @@ const ROLES: Role[] = [
           <span className="text-papier">
             Unit Multiplicator for AI Development
           </span>{" "}
-          — der, den Teams rufen, wenn KI-gestütztes Engineering im
+          – der, den Teams rufen, wenn KI-gestütztes Engineering im
           Delivery-Prozess wirklich funktionieren soll.
         </p>
         <p>
@@ -74,7 +74,7 @@ const ROLES: Role[] = [
     company: "Power Reply GmbH & Co. KG",
     body: (
       <p>
-        Beratung für Enterprise-Kunden in Energie und Telko — Inhouse-Apps
+        Beratung für Enterprise-Kunden in Energie und Telko – Inhouse-Apps
         für iOS, Android und Web; die ersten Jahre mit
         Produktionsverantwortung.
       </p>
@@ -88,7 +88,7 @@ const ROLES: Role[] = [
       <p>
         Werkstudenten- und Praktikumsstationen in E-Commerce und
         Dienstleistung (Mietservice 2000, Verlagsgruppe Weltbild u. a.)
-        während des Studiums — die Jahre, in denen ich gelernt habe: Software
+        während des Studiums – die Jahre, in denen ich gelernt habe: Software
         zählt erst, wenn echte Kunden sie benutzen.
       </p>
     ),
@@ -99,13 +99,12 @@ export default function LebenslaufPage() {
   return (
     <main className="relative mx-auto w-full max-w-[1200px] flex-1 px-6 pt-40 pb-32">
       <BrassGlow />
-      <Eyebrow>Lebenslauf</Eyebrow>
       <h1 className="max-w-3xl font-display italic text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-papier">
-        Lebenslauf — die lesbare Version
+        Mein Lebenslauf, die lesbare Version.
       </h1>
       <p className="mt-8 max-w-[65ch] text-lg leading-[1.6] text-papier-gedaempft">
         Zehn Jahre quer durch Versicherung, Halbleiter und
-        Enterprise-Software — die Kurzfassung steht auf dieser Seite, die
+        Enterprise-Software. Die Kurzfassung steht auf dieser Seite; die
         formale Version ist einen Klick entfernt.
       </p>
 
@@ -148,7 +147,7 @@ export default function LebenslaufPage() {
       <section data-reveal>
         <Eyebrow>Ausbildung</Eyebrow>
         <h2 className="font-display italic text-3xl text-papier">
-          Hochschule Augsburg — B.Sc. Wirtschaftsinformatik
+          Hochschule Augsburg – B.Sc. Wirtschaftsinformatik
         </h2>
         <p className="mt-2 max-w-[65ch] leading-[1.6] text-papier-gedaempft">
           2010 – 2015.
@@ -156,11 +155,11 @@ export default function LebenslaufPage() {
       </section>
 
       <section data-reveal className="mt-20">
-        <Eyebrow>Zertifizierungen</Eyebrow>
+        <Eyebrow as="h2">Zertifizierungen</Eyebrow>
         <ul className="max-w-[65ch] space-y-6">
           <li>
             <h3 className="text-xl font-medium text-papier">
-              iSAQB® Certified Professional for Software Architecture —
+              iSAQB® Certified Professional for Software Architecture –
               Foundation Level (CPSA-F)
             </h3>
           </li>

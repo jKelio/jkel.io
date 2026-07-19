@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Kontakt — Leon Jäkel am schnellsten über LinkedIn erreichen",
+  title: "Kontakt — über LinkedIn geht's am schnellsten",
   description:
     "Kontakt zu Leon Jäkel — Senior Software Engineer und AI Multiplicator in Augsburg. Auf LinkedIn vernetzen für Austausch zu Agentic Engineering, Vorträge und Claude-Code-Workshops, Recruiting oder Mentoring.",
   alternates: {
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 const INVITES: { title: string; body: string }[] = [
   {
     title: "Austausch zu Agentic Engineering.",
-    body: "Du bringst Claude Code, MCP oder Spec-Driven Development in ein Enterprise-Umfeld und willst Erfahrungen vergleichen — meine Lieblingsnachricht.",
+    body: "Du bringst Claude Code, MCP oder Spec-Driven Development in ein Enterprise-Umfeld und willst Erfahrungen vergleichen – meine Lieblingsnachricht.",
   },
   {
     title: "Vorträge & Workshops.",
-    body: "Meetups, Hackathons oder interne Enablement-Sessions zu KI-gestütztem Engineering — als AI-Speaker in Augsburg; München und remote gehen genauso.",
+    body: "Meetups, Hackathons oder interne Enablement-Sessions zu KI-gestütztem Engineering – als AI-Speaker in Augsburg; München und remote gehen genauso.",
   },
   {
     title: "Recruiting-Gespräche.",
@@ -32,7 +32,7 @@ const INVITES: { title: string; body: string }[] = [
   },
   {
     title: "Mentoring.",
-    body: "Studierende und Junior-Entwickler mit echten Fragen: fragt. Ich habe in jedem Projekt Entwickler onboardet und begleitet — und mache das gern.",
+    body: "Studierende und Junior-Entwickler mit echten Fragen: fragt. Ich habe in jedem Projekt Entwickler onboardet und begleitet – und mache das gern.",
   },
 ];
 
@@ -46,11 +46,11 @@ export default function KontaktPage() {
       </p>
 
       <h1 className="max-w-3xl font-display italic text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-papier">
-        Kontakt — über LinkedIn geht&apos;s am schnellsten
+        Über LinkedIn geht&apos;s am schnellsten.
       </h1>
       <p className="mt-8 max-w-[65ch] text-lg leading-[1.6] text-papier-gedaempft">
         Am besten erreichst du mich über{" "}
-        <span className="text-papier">LinkedIn</span> —
+        <span className="text-papier">LinkedIn</span>.
         Vernetzungsanfragen und Nachrichten lese ich dort täglich.
       </p>
 
@@ -60,19 +60,26 @@ export default function KontaktPage() {
             Auf LinkedIn vernetzen ↗
           </a>
         </Button>
-        <SocialIcons />
+        <SocialIcons linkedin={false} />
       </div>
 
       <p className="mt-8 leading-[1.6] text-papier-gedaempft">
         Lieber per E-Mail? <ObfuscatedEmail />
       </p>
 
-      <section data-reveal className="mt-24">
-        <Eyebrow>Worüber ich mich freue</Eyebrow>
+      <section className="mt-24">
+        <div data-reveal>
+          <Eyebrow as="h2">Worüber ich mich freue</Eyebrow>
+        </div>
         <div className="grid gap-10 md:grid-cols-2">
-          {INVITES.map(({ title, body }) => (
-            <div key={title} className="max-w-[55ch]">
-              <h2 className="text-xl font-medium text-papier">{title}</h2>
+          {INVITES.map(({ title, body }, index) => (
+            <div
+              key={title}
+              data-reveal
+              style={{ transitionDelay: `${(index % 2) * 80}ms` }}
+              className="max-w-[55ch]"
+            >
+              <h3 className="text-xl font-medium text-papier">{title}</h3>
               <p className="mt-2 leading-[1.6] text-papier-gedaempft">
                 {body}
               </p>
@@ -82,7 +89,7 @@ export default function KontaktPage() {
       </section>
 
       <p className="mt-24 font-utility text-sm text-papier-gedaempft">
-        Zuhause in Augsburg, Bayern — unterwegs mit Teams in ganz
+        Zuhause in Augsburg, Bayern – unterwegs mit Teams in ganz
         Deutschland und international.
       </p>
     </main>

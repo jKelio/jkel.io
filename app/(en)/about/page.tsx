@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import BrassGlow from "@/components/brass-glow";
-import Eyebrow from "@/components/eyebrow";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/site";
 
@@ -19,9 +18,8 @@ export default function AboutPage() {
   return (
     <main className="relative mx-auto w-full max-w-[1200px] flex-1 px-6 pt-40 pb-32">
       <BrassGlow />
-      <Eyebrow>About</Eyebrow>
       <h1 className="max-w-3xl font-display italic text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-papier">
-        About — The Person Behind the Commit History
+        The person behind the commit history.
       </h1>
       <p className="mt-8 max-w-[65ch] text-lg leading-[1.6] text-papier-gedaempft">
         If you&apos;ve searched for Leon Jäkel after a meetup, a hackathon, or
@@ -51,7 +49,7 @@ export default function AboutPage() {
           <ul className="list-disc space-y-3 pl-5">
             <li>
               Organizing a genAI hackathon in Munich (July 2026) as AI
-              multiplier for adesso teams — getting dozens of engineers
+              multiplier for adesso teams, getting dozens of engineers
               hands-on with agentic workflows in two days.
             </li>
             <li>
@@ -73,7 +71,7 @@ export default function AboutPage() {
           Hackathons made me do it
         </h2>
         <p className="max-w-[65ch] leading-[1.6] text-papier-gedaempft md:order-1">
-          I&apos;ve been a hackathon regular since 2017 — Hackerkiste (four
+          I&apos;ve been a hackathon regular since 2017: Hackerkiste (four
           years running), Code Days, AUXHACK, AWS Dev Days, a string of
           voice-assistant events in the Alexa era, and{" "}
           <span className="text-papier">
@@ -123,7 +121,7 @@ export default function AboutPage() {
       <div className="mt-24">
         <Button asChild>
           <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">
-            Connect with me on LinkedIn ↗
+            Connect on LinkedIn ↗
           </a>
         </Button>
       </div>

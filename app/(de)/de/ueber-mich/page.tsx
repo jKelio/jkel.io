@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import BrassGlow from "@/components/brass-glow";
-import Eyebrow from "@/components/eyebrow";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/site";
 
@@ -20,18 +19,17 @@ export default function UeberMichPage() {
   return (
     <main className="relative mx-auto w-full max-w-[1200px] flex-1 px-6 pt-40 pb-32">
       <BrassGlow />
-      <Eyebrow>Über mich</Eyebrow>
       <h1 className="max-w-3xl font-display italic text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-papier">
-        Über mich — der Mensch hinter der Commit-History
+        Der Mensch hinter der Commit-History.
       </h1>
       <p className="mt-8 max-w-[65ch] text-lg leading-[1.6] text-papier-gedaempft">
         Wenn du nach einem Meetup, einem Hackathon oder einem
-        LinkedIn-Thread nach Leon Jäkel gesucht hast — hi, du bist richtig.
+        LinkedIn-Thread nach Leon Jäkel gesucht hast – hi, du bist richtig.
         Ich bin Software Engineer in Augsburg, und fast alles, was ich
         beruflich tue, läuft auf ein Thema hinaus:{" "}
         <span className="text-papier">
-          Teams helfen, bessere Arten Software zu bauen zu übernehmen, bevor
-          sie offensichtlich sind.
+          Teams dabei helfen, bessere Wege des Software-Bauens zu
+          übernehmen, bevor sie offensichtlich sind.
         </span>
       </p>
 
@@ -46,13 +44,13 @@ export default function UeberMichPage() {
               Unit Multiplicator for AI Development
             </span>{" "}
             in der Business Line Insurance. In der Praxis heißt das: Ich
-            benutze agentische Tools nicht nur selbst — ich bringe sie bei
+            benutze agentische Tools nicht nur selbst – ich bringe sie bei
             anderen zum Laufen:
           </p>
           <ul className="list-disc space-y-3 pl-5">
             <li>
               Organisation eines genAI-Hackathons in München (Juli 2026) als
-              AI-Multiplikator für adesso-Teams — Dutzende Engineers in zwei
+              AI-Multiplikator für adesso-Teams – Dutzende Engineers in zwei
               Tagen hands-on mit agentischen Workflows.
             </li>
             <li>
@@ -62,7 +60,7 @@ export default function UeberMichPage() {
             </li>
             <li>
               Tagesgeschäft: Spec-Driven Development und Claude Code in
-              einer produktiven Allianz-Umgebung einführen — und das, was
+              einer produktiven Allianz-Umgebung einführen – und das, was
               funktioniert, in Praktiken übersetzen, die andere kopieren
               können.
             </li>
@@ -75,7 +73,7 @@ export default function UeberMichPage() {
           Hackathons sind schuld
         </h2>
         <p className="max-w-[65ch] leading-[1.6] text-papier-gedaempft md:order-1">
-          Seit 2017 bin ich Hackathon-Stammgast — Hackerkiste (vier Jahre in
+          Seit 2017 bin ich Hackathon-Stammgast: Hackerkiste (vier Jahre in
           Folge), Code Days, AUXHACK, AWS Dev Days, eine Reihe
           Voice-Assistant-Events aus der Alexa-Ära und{" "}
           <span className="text-papier">
@@ -83,7 +81,7 @@ export default function UeberMichPage() {
           </span>
           . Hackathons haben mir die Gewohnheit beigebracht, die bis heute
           meine Arbeit prägt: das Neue in die Hand nehmen,{" "}
-          <em>noch am Wochenende</em> etwas Echtes damit bauen — und erst
+          <em>noch am Wochenende</em> etwas Echtes damit bauen – und erst
           dann eine Meinung haben.
         </p>
       </section>
@@ -96,9 +94,9 @@ export default function UeberMichPage() {
           <p>
             Wenn ich nicht baue, streame ich vermutlich auf Twitch, reite
             zum x-ten Mal durch Red Dead Redemption 2 oder besuche Gothic 1
-            wieder, schaue Eishockey oder stecke in etwas Noir — Film, Musik
+            wieder, schaue Eishockey oder stecke in etwas Noir – Film, Musik
             oder Buch, Atmosphäre schlägt Plot. Außerdem bin ich der Typ
-            Mensch, der HTTP-Statuscodes ehrlich lustig findet — was
+            Mensch, der HTTP-Statuscodes ehrlich lustig findet – was
             entweder alles über mich sagt oder nichts.
           </p>
           <p>

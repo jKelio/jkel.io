@@ -16,8 +16,19 @@ export const metadata: Metadata = {
   },
 };
 
-const Tag = ({ children }: { children: React.ReactNode }) => (
-  <li className="rounded-full border border-haarlinie px-3 py-1 font-utility text-xs text-papier-gedaempft">
+// Featured tags get Messing text (DESIGN.md §4).
+const Tag = ({
+  children,
+  featured = false,
+}: {
+  children: React.ReactNode;
+  featured?: boolean;
+}) => (
+  <li
+    className={`rounded-full border border-haarlinie px-3 py-1 font-utility text-xs ${
+      featured ? "text-messing" : "text-papier-gedaempft"
+    }`}
+  >
     {children}
   </li>
 );
@@ -60,9 +71,8 @@ export default function ProjectsPage() {
   return (
     <main className="relative mx-auto w-full max-w-[1200px] flex-1 px-6 pt-40 pb-32">
       <BrassGlow />
-      <Eyebrow>Projects</Eyebrow>
       <h1 className="max-w-3xl font-display italic text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-papier">
-        Projects — Where Spec-Driven Development Meets Production
+        Where Spec-Driven Development meets production.
       </h1>
       <p className="mt-8 max-w-[65ch] text-lg leading-[1.6] text-papier-gedaempft">
         Two case studies in depth, the rest at a glance. Every project here
@@ -130,7 +140,9 @@ export default function ProjectsPage() {
             "AWS",
             "Claude Code",
           ].map((t) => (
-            <Tag key={t}>{t}</Tag>
+            <Tag key={t} featured={t === "Claude Code"}>
+              {t}
+            </Tag>
           ))}
         </ul>
       </article>
@@ -176,7 +188,7 @@ export default function ProjectsPage() {
 
       {/* More projects */}
       <section className="mt-32">
-        <Eyebrow>More projects</Eyebrow>
+        <Eyebrow as="h2">More projects</Eyebrow>
         <div className="flex flex-col gap-16">
           {MORE_PROJECTS.map(({ title, dates, body }) => (
             <article data-reveal key={title} className="max-w-[70ch]">
@@ -205,7 +217,7 @@ export default function ProjectsPage() {
         <div className="mt-8">
           <Button asChild>
             <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">
-              Connect with me on LinkedIn ↗
+              Connect on LinkedIn ↗
             </a>
           </Button>
         </div>

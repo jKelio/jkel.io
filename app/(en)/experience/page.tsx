@@ -99,13 +99,12 @@ export default function ExperiencePage() {
   return (
     <main className="relative mx-auto w-full max-w-[1200px] flex-1 px-6 pt-40 pb-32">
       <BrassGlow />
-      <Eyebrow>Experience</Eyebrow>
       <h1 className="max-w-3xl font-display italic text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-papier">
-        Experience — My CV, the Readable Version
+        My CV, the readable version.
       </h1>
       <p className="mt-8 max-w-[65ch] text-lg leading-[1.6] text-papier-gedaempft">
-        Ten years across insurance, semiconductors, and enterprise software —
-        the short story is on this page, the formal version is one click away.
+        Ten years across insurance, semiconductors, and enterprise software.
+        The short story is on this page; the formal version is one click away.
       </p>
 
       <div className="mt-10 flex flex-wrap gap-6">
@@ -156,7 +155,7 @@ export default function ExperiencePage() {
       </section>
 
       <section data-reveal className="mt-20">
-        <Eyebrow>Certifications</Eyebrow>
+        <Eyebrow as="h2">Certifications</Eyebrow>
         <ul className="max-w-[65ch] space-y-6">
           <li>
             <h3 className="text-xl font-medium text-papier">

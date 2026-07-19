@@ -16,8 +16,19 @@ export const metadata: Metadata = {
   },
 };
 
-const Tag = ({ children }: { children: React.ReactNode }) => (
-  <li className="rounded-full border border-haarlinie px-3 py-1 font-utility text-xs text-papier-gedaempft">
+// Hervorgehobene Tags bekommen Messing-Text (DESIGN.md §4).
+const Tag = ({
+  children,
+  featured = false,
+}: {
+  children: React.ReactNode;
+  featured?: boolean;
+}) => (
+  <li
+    className={`rounded-full border border-haarlinie px-3 py-1 font-utility text-xs ${
+      featured ? "text-messing" : "text-papier-gedaempft"
+    }`}
+  >
     {children}
   </li>
 );
@@ -30,22 +41,22 @@ type BriefProject = {
 
 const MORE_PROJECTS: BriefProject[] = [
   {
-    title: "Swiss Life Deutschland — Modernisierung von Versicherungssoftware",
+    title: "Swiss Life Deutschland – Modernisierung von Versicherungssoftware",
     dates: "07/2022 – 08/2024",
     body: "Inkasso-/Exkasso- und Rentenverwaltungs-Anwendungen von Oracle Forms zu entkoppelten modernen Web-Apps migriert. Prozessanalyse, Full-Stack-Entwicklung (Java, Spring Boot, Vue, TypeScript, Oracle DB, OpenAPI), Code-Reviews und Mentoring von Junior-Entwicklern in einem zweijährigen Einsatz.",
   },
   {
-    title: "CAPRI, Infineon — DevOps & Frontend Engineering",
+    title: "CAPRI, Infineon – DevOps & Frontend Engineering",
     dates: "09/2024 – 12/2024",
     body: "Plattform zwischen Marktbeobachtung und Produktentwicklung. Sustaining Engineering, Angular-17→18-Upgrade, Release-Management auf OpenShift, Code-Reviews. Stack: Nest.js, Angular, Prisma, TypeORM.",
   },
   {
-    title: "SAP SE — Dependency-Analyse-Tool",
+    title: "SAP SE – Dependency-Analyse-Tool",
     dates: "05/2020 – 06/2021",
     body: "Analyse kommerzieller und Open-Source-Abhängigkeiten gegen Compliance-Regeln. Java, jersey, Postgres, Apache Lucene, Kubernetes, Docker.",
   },
   {
-    title: "adesso BOOKR — Arbeitsplatzbuchung",
+    title: "adesso BOOKR – Arbeitsplatzbuchung",
     dates: "seit 05/2023",
     body: "Internes Tool zur Buchung von Schreibtischen, Telefonboxen und Parkplätzen in Open-Space-Büros (Angular, Java, Spring Boot). Meine Rolle: technisches Mentoring, Pair Programming, QA, Code-Reviews.",
   },
@@ -60,9 +71,8 @@ export default function ProjektePage() {
   return (
     <main className="relative mx-auto w-full max-w-[1200px] flex-1 px-6 pt-40 pb-32">
       <BrassGlow />
-      <Eyebrow>Projekte</Eyebrow>
       <h1 className="max-w-3xl font-display italic text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-papier">
-        Projekte — wo Spec-Driven Development auf Produktion trifft
+        Wo Spec-Driven Development auf Produktion trifft.
       </h1>
       <p className="mt-8 max-w-[65ch] text-lg leading-[1.6] text-papier-gedaempft">
         Zwei Case Studies im Detail, der Rest im Überblick. Jedes Projekt
@@ -75,7 +85,7 @@ export default function ProjektePage() {
           ALLIANZ SE · SDW-TRIBE · SEIT 12/2024
         </p>
         <h2 className="mt-4 font-display italic text-3xl leading-[1.2] text-papier">
-          Global Offer Management bei der Allianz — Claude Code in
+          Global Offer Management bei der Allianz – Claude Code in
           Enterprise-Produktion
         </h2>
         <div className="mt-6 max-w-[70ch] space-y-4 leading-[1.6] text-papier-gedaempft">
@@ -88,7 +98,7 @@ export default function ProjektePage() {
           </p>
           <p>
             <span className="text-papier">Meine Rolle.</span> Senior
-            Full-Stack Engineer im SPM-/Global-Offer-Management-Team — und
+            Full-Stack Engineer im SPM-/Global-Offer-Management-Team – und
             der Engineer, der Spec-Driven Development mit Claude Code und
             MCP-Integrationen in die tägliche Delivery bringt. Specs werden
             zum Vertrag; Agenten übernehmen die mechanische Arbeit; Engineers
@@ -100,7 +110,7 @@ export default function ProjektePage() {
               Microfrontend-Implementierung für das Offer-Management-Modul
             </li>
             <li>
-              Angular-Upgrades von Version 17 bis 22 — eine Live-Plattform
+              Angular-Upgrades von Version 17 bis 22 – eine Live-Plattform
               über Major-Releases hinweg aktuell gehalten
             </li>
             <li>Wiederverwendbare UI-Komponenten, teamübergreifend im Einsatz</li>
@@ -111,12 +121,12 @@ export default function ProjektePage() {
           <p>
             <span className="text-papier">Das Ergebnis.</span> Spec-Driven
             Development trägt die Delivery des Moduls über Angular, Spring
-            Boot, Camunda, BFF und DSGVO-relevante Schichten hinweg — ohne
+            Boot, Camunda, BFF und DSGVO-relevante Schichten hinweg – ohne
             Layer-Spezialisten. Agentische QA vor jedem Pull Request findet
             Probleme früh, darunter eine stille CI-Lücke und einen
             Architekturfehler noch vor der ersten Zeile Code. Der Großteil
             des KI-Aufwands fließt in die Ausarbeitung der Specs, nicht in
-            die Ausführung — die Spec ist die Arbeit.
+            die Ausführung – die Spec ist die Arbeit.
           </p>
         </div>
         <ul className="mt-8 flex flex-wrap gap-2">
@@ -132,7 +142,9 @@ export default function ProjektePage() {
             "AWS",
             "Claude Code",
           ].map((t) => (
-            <Tag key={t}>{t}</Tag>
+            <Tag key={t} featured={t === "Claude Code"}>
+              {t}
+            </Tag>
           ))}
         </ul>
       </article>
@@ -143,7 +155,7 @@ export default function ProjektePage() {
           ALLIANZ SE · 07/2021 – 10/2022
         </p>
         <h2 className="mt-4 font-display italic text-3xl leading-[1.2] text-papier">
-          Automatisierte Dokumentenanalyse — im Einsatz in der gesamten
+          Automatisierte Dokumentenanalyse – im Einsatz in der gesamten
           Allianz Gruppe
         </h2>
         <div className="mt-6 max-w-[70ch] space-y-4 leading-[1.6] text-papier-gedaempft">
@@ -152,7 +164,7 @@ export default function ProjektePage() {
             der ganzen Allianz vergleichen und bewerten große Mengen an
             Dokumenten. In diesem Projekt entstanden Webanwendungen, die
             Analyse, Bewertung und Vergleich von Underwriting-Dokumenten
-            automatisieren — global ausgerollt in der Allianz Gruppe.
+            automatisieren – global ausgerollt in der Allianz Gruppe.
           </p>
           <p>
             <span className="text-papier">Meine Rolle.</span> Lead Frontend
@@ -179,7 +191,7 @@ export default function ProjektePage() {
 
       {/* Weitere Projekte */}
       <section className="mt-32">
-        <Eyebrow>Weitere Projekte</Eyebrow>
+        <Eyebrow as="h2">Weitere Projekte</Eyebrow>
         <div className="flex flex-col gap-16">
           {MORE_PROJECTS.map(({ title, dates, body }) => (
             <article data-reveal key={title} className="max-w-[70ch]">

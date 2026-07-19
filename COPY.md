@@ -1,6 +1,6 @@
-# COPY.md — jkel.io Site Copy (Draft 1)
+# COPY.md — jkel.io Site Copy
 
-> **Status:** Draft for review — nothing built yet.
+> **Status:** Built; revised 2026-07-19 (taste critique): H1s lost their "PageName —" title-tag prefixes (the eyebrow/nav already name the page), em-dash density halved, the stat row reduced to one display stat, CTA label unified to "Connect on LinkedIn", "(Kontakt)" hints removed (superseded by the bilingual build).
 > **Language:** English, with natural German signals for local search (Augsburg, Lebenslauf, Kontakt).
 > All placeholders resolved 2026-07-04: SDW metrics from the project fact sheet, no client figures for the document-analysis case study, Twitch link added, Angular 17→22 confirmed (every major: 17→18→19→20→21→22).
 > **One thing to verify:** you gave "Angular upgrade 17 to 22" as a search term — I've written the Allianz SDW case study as covering upgrades *through Angular 22*. Please confirm that's factually right.
@@ -15,24 +15,26 @@
 
 ### Copy
 
-# Leon Jäkel — Agentic Engineering, Shipped to Production
+# Agentic engineering, shipped to production.
+
+*(The name lives in the status chip, the wordmark, and the title tag — not in the H1.)*
 
 I'm a Senior Software Engineer at adesso SE in Augsburg, and I spend my days doing something most teams are still only talking about: running **agentic engineering workflows — Claude Code, MCP integrations, Spec-Driven Development — inside a live enterprise production environment** at Allianz.
 
-That's not a side experiment. It sits on top of ten years of full-stack engineering for names you know: **Allianz, Infineon, Swiss Life, SAP** — Angular and TypeScript up front, Java and Spring Boot behind, Kubernetes and AWS underneath.
+That's not a side experiment. It sits on top of ten years of full-stack engineering for names you know: **Allianz, Infineon, Swiss Life, SAP**. Angular and TypeScript up front, Java and Spring Boot behind, Kubernetes and AWS underneath.
 
-**[Button] Connect with me on LinkedIn**
+**[Button] Connect on LinkedIn**
 
 ## What I do
 
 **Agentic engineering, for real workloads.**
-As adesso's Unit Multiplicator for AI Development in the Insurance line, I introduce AI-assisted engineering where it has to survive code review, compliance, and release trains — not just demos. Currently: Spec-Driven Development with Claude Code on Allianz's global sales platform.
+As adesso's Unit Multiplicator for AI Development in the Insurance line, I introduce AI-assisted engineering where it has to survive code review, compliance, and release trains, not just demos. Currently: Spec-Driven Development with Claude Code on Allianz's global sales platform.
 
 **Senior full-stack delivery.**
 Microfrontends, framework upgrades (Angular 17 through 22), reusable component libraries, event-driven backends with Kafka and Camunda. I've led frontends used across the Allianz Group worldwide and modernized systems that started life in Oracle Forms.
 
 **Making other engineers better.**
-Technical mentoring, pair programming, onboarding, code reviews — and a genAI hackathon in Munich I'm organizing to pull whole teams up the AI curve.
+Technical mentoring, pair programming, onboarding, code reviews. Plus a genAI hackathon in Munich I'm organizing to pull whole teams up the AI curve.
 
 ## Tech I reach for
 
@@ -45,9 +47,11 @@ Technical mentoring, pair programming, onboarding, code reviews — and a genAI 
 
 ## Where the proof is
 
-- [Ten+ years] of enterprise projects → **[link: Projects]**
+One display stat carries the brass (D-29); the credentials stand as a list — the 650+ and the 2018 result no longer render as display numerals.
+
+- **[10+]** Years of enterprise projects
 - iSAQB® Certified Professional for Software Architecture (CPSA-F)
-- Selected from **650+ applicants** for the Anthropic Claude Certified Architect Foundations program
+- Anthropic Claude Certified Architect Foundations (CCA-F): selected from **650+ applicants**, in progress
 - 2nd place & Community Prize, iHack.Ruhr 2018
 
 **[Button] Connect on LinkedIn** · [link: See my work →]
@@ -62,9 +66,9 @@ Technical mentoring, pair programming, onboarding, code reviews — and a genAI 
 
 ### Copy
 
-# Experience — My CV, the Readable Version
+# My CV, the readable version.
 
-Ten years across insurance, semiconductors, and enterprise software — the short story is on this page, the formal version is one click away.
+Ten years across insurance, semiconductors, and enterprise software. The short story is on this page; the formal version is one click away.
 
 **[Button] Download CV as PDF (Lebenslauf)** · **[Button] Connect on LinkedIn**
 
@@ -114,7 +118,7 @@ Working-student and internship roles in e-commerce and services (Mietservice 200
 
 ### Copy
 
-# Projects — Where Spec-Driven Development Meets Production
+# Where Spec-Driven Development meets production.
 
 Two case studies in depth, the rest at a glance. Every project here shipped to real users in regulated industries.
 
@@ -169,7 +173,7 @@ Internal tool for booking desks, phone booths, and parking in open-space offices
 ---
 
 **Working on something in this space?**
-**[Button] Connect with me on LinkedIn**
+**[Button] Connect on LinkedIn**
 
 ---
 
@@ -181,7 +185,7 @@ Internal tool for booking desks, phone booths, and parking in open-space offices
 
 ### Copy
 
-# About — The Person Behind the Commit History
+# The person behind the commit history.
 
 If you've searched for Leon Jäkel after a meetup, a hackathon, or a LinkedIn thread — hi, you found the right one. I'm a software engineer in Augsburg, and most of what I do professionally comes down to one theme: **helping teams adopt better ways of building software before those ways are obvious.**
 
@@ -189,13 +193,13 @@ If you've searched for Leon Jäkel after a meetup, a hackathon, or a LinkedIn th
 
 At adesso SE I'm the **Unit Multiplicator for AI Development** in the Insurance Business Line. In practice that means I don't just use agentic tools myself — I make them land for other people:
 
-- **Organizing a genAI hackathon in Munich (July 2026)** as AI multiplier for adesso teams — getting dozens of engineers hands-on with agentic workflows in two days.
+- **Organizing a genAI hackathon in Munich (July 2026)** as AI multiplier for adesso teams, getting dozens of engineers hands-on with agentic workflows in two days.
 - **Building AI-Bites**, a live visualization system running as a Microsoft Teams tab, so AI learning moments reach people where they actually work.
 - Day to day: introducing Spec-Driven Development and Claude Code into a live Allianz production environment, and turning what works into practices others can copy.
 
 ## Hackathons made me do it
 
-I've been a hackathon regular since 2017 — Hackerkiste (four years running), Code Days, AUXHACK, AWS Dev Days, a string of voice-assistant events in the Alexa era, and **2nd place plus the Community Prize at iHack.Ruhr 2018**. Hackathons taught me the habit that still defines how I work: pick the new thing up, build something real with it *this weekend*, and only then form an opinion.
+I've been a hackathon regular since 2017: Hackerkiste (four years running), Code Days, AUXHACK, AWS Dev Days, a string of voice-assistant events in the Alexa era, and **2nd place plus the Community Prize at iHack.Ruhr 2018**. Hackathons taught me the habit that still defines how I work: pick the new thing up, build something real with it *this weekend*, and only then form an opinion.
 
 ## Off the clock
 
@@ -203,30 +207,30 @@ When I'm not engineering, I'm probably streaming on Twitch (https://twitch.tv/jK
 
 **[GitHub: https://github.com/jKelio · Twitch: https://twitch.tv/jKelio]**
 
-**[Button] Connect with me on LinkedIn**
+**[Button] Connect on LinkedIn**
 
 ---
 
 ## Page 5: Contact (`/contact`)
 
 **Target searches:** Leon Jäkel LinkedIn · Leon Jäkel contact / Kontakt · AI speaker Augsburg / Claude Code workshop
-**Title tag:** `Contact / Kontakt — Reach Leon Jäkel on LinkedIn`
+**Title tag:** `Contact — LinkedIn is the fastest way` *(the layout template appends "| Leon Jäkel"; the name must not appear twice)*
 **Meta description:** `Contact Leon Jäkel — Senior Software Engineer and AI Multiplicator in Augsburg. Connect on LinkedIn for agentic engineering exchange, speaking and Claude Code workshops, recruiting, or mentoring.`
 
 ### Copy
 
-# Contact — LinkedIn Is the Fastest Way (Kontakt)
+# LinkedIn is the fastest way.
 
-The best way to reach me is **LinkedIn** — I read connection requests and messages there daily.
+The best way to reach me is **LinkedIn**. I read connection requests and messages there daily.
 
-**[Button — primary] Connect with me on LinkedIn**
+**[Button — primary] Connect on LinkedIn**
 
 Prefer email? **[obfuscated email — rendered client-side, not in page source]**
 
 ## What I'm happy to hear about
 
 - **Agentic engineering exchange.** You're bringing Claude Code, MCP, or Spec-Driven Development into an enterprise setting and want to compare notes — my favorite kind of message.
-- **Speaking & workshops.** Meetups, hackathons, or internal enablement sessions on AI-assisted engineering — as an **AI speaker based in Augsburg**, Munich and remote work fine too.
+- **Speaking & workshops.** Meetups, hackathons, or internal enablement sessions on AI-assisted engineering — as an **AI speaker based in Augsburg**; Munich and remote work fine too.
 - **Recruiting conversations.** I'm not actively looking, but I read every thoughtful message.
 - **Mentoring.** Students and junior developers with real questions: ask. I've onboarded and mentored developers on every project I've been part of, and I like doing it.
 

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact / Kontakt — Reach Leon Jäkel on LinkedIn",
+  title: "Contact — LinkedIn is the fastest way",
   description:
     "Contact Leon Jäkel — Senior Software Engineer and AI Multiplicator in Augsburg. Connect on LinkedIn for agentic engineering exchange, speaking and Claude Code workshops, recruiting, or mentoring.",
   alternates: {
@@ -24,7 +24,7 @@ const INVITES: { title: string; body: string }[] = [
   },
   {
     title: "Speaking & workshops.",
-    body: "Meetups, hackathons, or internal enablement sessions on AI-assisted engineering — as an AI speaker based in Augsburg, Munich and remote work fine too.",
+    body: "Meetups, hackathons, or internal enablement sessions on AI-assisted engineering — as an AI speaker based in Augsburg; Munich and remote work fine too.",
   },
   {
     title: "Recruiting conversations.",
@@ -46,33 +46,40 @@ export default function ContactPage() {
       </p>
 
       <h1 className="max-w-3xl font-display italic text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-papier">
-        Contact — LinkedIn Is the Fastest Way
+        LinkedIn is the fastest way.
       </h1>
       <p className="mt-8 max-w-[65ch] text-lg leading-[1.6] text-papier-gedaempft">
-        The best way to reach me (Kontakt) is{" "}
-        <span className="text-papier">LinkedIn</span> — I read connection
+        The best way to reach me is{" "}
+        <span className="text-papier">LinkedIn</span>. I read connection
         requests and messages there daily.
       </p>
 
       <div className="mt-10 flex flex-wrap items-center gap-6">
         <Button asChild>
           <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">
-            Connect with me on LinkedIn ↗
+            Connect on LinkedIn ↗
           </a>
         </Button>
-        <SocialIcons />
+        <SocialIcons linkedin={false} />
       </div>
 
       <p className="mt-8 leading-[1.6] text-papier-gedaempft">
         Prefer email? <ObfuscatedEmail />
       </p>
 
-      <section data-reveal className="mt-24">
-        <Eyebrow>What I&apos;m happy to hear about</Eyebrow>
+      <section className="mt-24">
+        <div data-reveal>
+          <Eyebrow as="h2">What I&apos;m happy to hear about</Eyebrow>
+        </div>
         <div className="grid gap-10 md:grid-cols-2">
-          {INVITES.map(({ title, body }) => (
-            <div key={title} className="max-w-[55ch]">
-              <h2 className="text-xl font-medium text-papier">{title}</h2>
+          {INVITES.map(({ title, body }, index) => (
+            <div
+              key={title}
+              data-reveal
+              style={{ transitionDelay: `${(index % 2) * 80}ms` }}
+              className="max-w-[55ch]"
+            >
+              <h3 className="text-xl font-medium text-papier">{title}</h3>
               <p className="mt-2 leading-[1.6] text-papier-gedaempft">
                 {body}
               </p>
