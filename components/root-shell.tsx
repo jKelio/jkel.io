@@ -19,6 +19,13 @@ const RootShell = ({
     className={`${newsreader.variable} ${plexSans.variable} ${plexMono.variable} h-full antialiased`}
   >
     <body className="min-h-full flex flex-col">
+      {/* Pre-paint marker for the data-reveal hidden state (D-32): must run
+          before content paints, or in-view sections flicker at hydration. */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.classList.add("js")`,
+        }}
+      />
       <ScrollReveal />
       <SiteNav />
       {children}

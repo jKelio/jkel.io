@@ -6,15 +6,14 @@ import { useEffect } from "react";
 /*
  * Observes [data-reveal] elements and fades them up on viewport entry
  * (decision D-17). Re-scans on route change; IntersectionObserver only —
- * no scroll listeners. The html.js class gates the hidden initial state
- * so content is never invisible without JavaScript.
+ * no scroll listeners. The html.js class that gates the hidden initial
+ * state is set by a pre-paint inline script in RootShell (D-32), so
+ * in-view sections never paint visible and then snap hidden at hydration.
  */
 const ScrollReveal = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    document.documentElement.classList.add("js");
-
     const elements = document.querySelectorAll("[data-reveal]:not(.revealed)");
     const observer = new IntersectionObserver(
       (entries) => {
